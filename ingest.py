@@ -10,7 +10,7 @@ import os
 
 
 ## load the document
-def load_document():
+def load_documents():
     loader = TextLoader("data/Google.txt", encoding="utf-8")
     documents = loader.load()
     return documents
