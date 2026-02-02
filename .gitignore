@@ -1,0 +1,13 @@
+# virtual environment
+venv_chroma/
+.venv_chroma
+
+# vector store (generated)
+vectorstore/
+
+# python cache
+__pycache__/
+*.pyc
+
+# OS files
+.DS_Store
