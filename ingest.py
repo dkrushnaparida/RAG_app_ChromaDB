@@ -19,7 +19,6 @@ def load_documents():
 ## split the document into chunks
 def split_documents(documents):
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=400, chunk_overlap=50)
-
     chunks = text_splitter.split_documents(documents)
     return chunks
 
@@ -35,5 +34,4 @@ if __name__ == "__main__":
     docs = load_documents()
     chunks = split_documents(docs)
     create_vector_store(chunks)
-
     print("Documents ingested and vector store created!")

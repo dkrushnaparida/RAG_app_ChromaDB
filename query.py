@@ -50,18 +50,14 @@ def generate_answer(docs, query):
     )
 
     llm = ChatOllama(model=LLM_MODEL, temperature=0)
-
     final_prompt = prompt.invoke({"context": context, "question": query})
-
     response = llm.invoke(final_prompt)
     return response.content
 
 
 if __name__ == "__main__":
     vectorstore = load_vector_store()
-
     user_question = input("Ask your question: ").strip()
-
     if not user_question:
         print("Please enter a valid question.")
         exit(1)
